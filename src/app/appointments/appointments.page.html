@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button
+          style="margin-right: 0.5em; display: flex; background-color: rgb(56, 128, 255); padding: 0.25rem; align-items: center; font-size: 20px; border-radius: 1em 0 0 1em; color: white;"
+          (click)="routeBack()">
+          <ion-icon name="caret-back-outline"></ion-icon>
+          Geri
+        </button>
+        <ion-title>
+          Randevu Listesi
+        </ion-title>
+        <button
+          style="margin-left: 0.25em; display: flex; background-color: rgb(56, 128, 255); padding: 0.25rem; align-items: center; font-size: 20px; border-radius: 0 1em 1em 0; color: white;"
+          (click)="routeAddDoctor()">
+          <ion-icon name="caret-back-outline"></ion-icon>
+          +
+        </button>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid style="text-align: center; font-weight: bold; margin-top: 1rem;">
+    <ng-container *ngFor="let doctor of doctors">
+      <div style="margin-top: 1.5rem;">
+        <span>DR. {{ doctor.name }} {{ doctor.lastName }}</span>
+        <ion-row *ngFor="let appointment of doctor.appointments">
+          <ion-col>
+            <ion-card
+              style="display: flex; flex-direction: column; align-items: center; padding: 1rem; background-color: rgb(34, 130, 130); margin: 0;">
+              <span style="margin-top: 0.25rem; margin-bottom: 0.25rem; color: white;">{{ appointment.patientName }} {{
+                appointment.patientLastName }}</span>
+              <span style="margin-top: 0.25rem; margin-bottom: 0.25rem; color: white;">{{ appointment.appointmentDate
+                }}</span>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ng-container>
+  </ion-grid>
+</ion-content>

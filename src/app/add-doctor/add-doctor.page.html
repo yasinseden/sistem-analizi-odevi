@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <button
+        style="margin-left: 0.25em; display: flex; background-color: rgb(56, 128, 255); padding: 0.25rem; align-items: center; font-size: 20px; border-radius: 1em 0 0 1em; color: white;"
+        (click)="routeBack()">
+        <ion-icon name="caret-back-outline"></ion-icon>
+        Geri
+      </button>
+      <ion-title>
+        Randevu Al
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div
+    style="width: 100%; display: flex; align-items: end; height: calc(100% - 44px); background-image: url(assets/images/clock.jpg); background-repeat: no-repeat; background-size: cover; flex-direction: column; justify-content: center;">
+    <ion-list style="margin-left: auto; margin-right: auto; opacity: 0.75;">
+      <ion-list>
+        <ion-item style="margin: 1.5rem 0">
+          <ion-input label="İsim" placeholder="İsim"></ion-input>
+        </ion-item>
+
+        <ion-item style="margin: 1.5rem 0">
+          <ion-input label="Soyisim" placeholder="Soyisim"></ion-input>
+        </ion-item>
+
+        <ion-item style="margin: 1.5rem 0">
+          <ion-input label="Hastane" placeholder="Hastane"></ion-input>
+        </ion-item>
+
+        <ion-item style="margin: 1.5rem 0">
+          <ion-input label="Uzmanlık" placeholder="Uzmanlık"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-list>
+    <ion-footer style="display: flex; justify-content: end; padding: 2rem;">
+      <ion-button>Doktor Ekle</ion-button>
+    </ion-footer>
+  </div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" style="display: flex; justify-content: center;">Randevu Sistemi</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/images/hospital.jpg" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <span style="font-size: 20px;">
+          Hasta Girişi Yapmak İçin Alttaki Resme Tıklayınız
+        </span>
+        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <span style="font-size: 20px;">
+          Doktor Girişi Yapmak İçin Alttaki Resme Tıklayınız
+        </span>
+        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button style="background-color: white;" (click)="navigateToPatientPage('patient')">
+          <img src="assets/images/patient.jpg" alt="">
+          <span style="font-size: 20px; font-weight: bold; margin-top: 1rem;">
+            Hasta Girişi
+          </span>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button style="background-color: white;" (click)="navigateToPatientPage('appointments')">
+          <img src="assets/images/doctor.jpg" alt="">
+          <span style="font-size: 20px; font-weight: bold; margin-top: 1rem;">
+            Doktor Girişi
+          </span>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-footer
+    style="background-image: url(assets/images/bottom-img.jpg); background-size: cover; background-repeat: no-repeat; min-height: 12rem; display: flex; align-items: center;">
+    <div style="width: 45%; min-height: 5px;"></div>
+    <div style="width: 55%; color: white; display: flex; align-items: center;">
+      <span style="font-size: 20px;">Sağlığınız Bize Emanet</span>
+    </div>
+  </ion-footer>
+</ion-content>
